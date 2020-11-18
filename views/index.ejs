@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel='stylesheet' href='/stylesheets/UserProfile/style.css'/>
+        <link rel='stylesheet' href='/stylesheets/VideoList/style.css'/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        
+      </head>
+    <body>
+        <div class="container main-secction">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                    <img src="/images/cover.png">
+                </div>
+                <div class="row user-left-part">
+                    <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                        <div class="row">
+                            <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                              <a href="/users/home" class="rounded-circle btn btn-lg btn-danger"><i class="fa fa-cloud-upload fa-5x" aria-hidden="true"></i></a>
+                            </div>
+                                                        
+                            
+                                                       
+                        </div>
+                        
+                      </div>
+                    
+                </div>
+                <br>
+                <br>
+                <br>
+                <hr/>
+                <div class="container">
+                  
+                    <ul class="list-unstyled video-list-thumbs row">
+                        <% videos.forEach(video => { %>
+                     
+                            
+                        <li class="col-lg-3 col-sm-4 col-xs-6">
+                            <a href="/users/video_details/<%=video._id%>" title="<%=video.title%>">
+                                <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                                <h2><%=video.title%></h2>
+                                <span class="glyphicon glyphicon-play-circle"></span>
+                                <span class="duration"><%=video.publishDate%></span>
+                            </a>
+                        </li>
+                        <% }) %>
+                        <!-- <li class="col-lg-3 col-sm-4 col-xs-6">
+                            <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
+                                <img src="http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                                <h2>Claudio Bravo, antes su debut con el Barça en la Liga</h2>
+                                <span class="glyphicon glyphicon-play-circle"></span>
+                                <span class="duration">03:15</span>
+                            </a>
+                        </li> -->
+                        
+                    </ul>
+                    
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
